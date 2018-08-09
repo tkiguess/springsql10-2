@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+</head>
+<body>
+
+<a href="/">Show All Courses</a><br />
+
+Title :<span th:text="${customer.title}" ></span><br />
+First Name: <span th:text="${customer.firstname}" ></span><br />
+Last Name: <span th:text="${customer.lastname}" ></span><br />
+address: <span th:text="${customer.address}" ></span><br />
+City: <span th:text="${customer.city}" ></span><br />
+State: <span th:text="${customer.state}" ></span><br />
+Zip Code: <span th:text="${customer.zipcode}" ></span><br />
+Email: <span th:text="${customer.email}" ></span><br />
+Position: <span th:text="${customer.position}" ></span><br />
+Company: <span th:text="${customer.company}" ></span><br />
+
+<a th:href="@{/delete/{id}(id=${customer.id})}">Delete this course</a>
+</body>
+</html>
